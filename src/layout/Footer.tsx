@@ -1,3 +1,5 @@
+import logo from "../assets/logo.svg";
+
 function Footer() {
   return (
     <footer className="bg-slate-100 shadow dark:bg-slate-800">
@@ -7,7 +9,7 @@ function Footer() {
             href="/"
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
-            <img width={90} src="logo.svg" />
+            <img width={35} src={logo} />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Bookmie Devs
             </span>

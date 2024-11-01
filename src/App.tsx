@@ -1,10 +1,9 @@
 // import { useState } from "react";
 import Home from "./pages/HomePage/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout/Layout";
+import Layout from "./layout/Layout";
 import Login from "./pages/LoginPage/Login";
 import Signup from "./pages/SignupPage/Signup";
-
 
 // import "./App.css";
 

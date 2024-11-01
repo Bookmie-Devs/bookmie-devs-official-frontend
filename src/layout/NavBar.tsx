@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 function NavBar() {
   return (
-    <nav className="dark:bg-slate-800 bg-slate-100 flex justify-between shadow-2xl shadow-emerald-200 px-9 py-7">
+    <nav className="dark:bg-slate-800 bg-slate-100 flex justify-between shadow-2xl shadow-emerald-200 px-9 py-5">
       <Logo />
       <div className="space-x-4 hidden sm:inline">
         <Link to={"login"} className="text-xl text-black dark:text-white">
