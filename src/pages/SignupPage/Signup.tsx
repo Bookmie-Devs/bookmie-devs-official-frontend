@@ -29,7 +29,7 @@ function Signup() {
 
   return (
     <div className="h-auto pt-16 items-center bg-slate-800 justify-center flex space-y-5">
-      <div className="flex justify-center space-x-10 px-28">
+      <div className="flex justify-center mb-9 sm:mb-0 sm:space-x-10 px-28">
         <div className="hidden sm:inline">
           <div className="">
             <img className="animate-pulse" src={confenrence} />

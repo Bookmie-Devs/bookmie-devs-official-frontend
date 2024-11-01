@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 
 interface CustomButtonProps {
   name: string;
+  to: string;
 }
 
 // Step 2: Use the interface in the component
-function CustomButton({ name }: CustomButtonProps): React.JSX.Element {
+function CustomButton({ name, to }: CustomButtonProps): React.JSX.Element {
   return (
     <Link
-      to="questions"
+      to={to}
       className="
         outline
         outline-2 
@@ -17,6 +18,7 @@ function CustomButton({ name }: CustomButtonProps): React.JSX.Element {
         outline-slate-800
         text-slate-800
         text-xl dark:text-white
+        text-center
         shadow-md rounded-md px-16 py-5"
     >
       {name}
