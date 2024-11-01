@@ -32,7 +32,7 @@ function Signup() {
       <div className="flex justify-center space-x-10 px-28">
         <div className="hidden sm:inline">
           <div className="">
-            <img className="" src={confenrence} />
+            <img className="animate-pulse" src={confenrence} />
           </div>
         </div>
         <form className="" action="" onSubmit={handleSignup}>
