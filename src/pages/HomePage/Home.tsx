@@ -30,7 +30,10 @@ function Home() {
 
           <div className="flex space-y-4 sm:space-y-0 sm:space-x-4 flex-col sm:flex-row">
             <GetStartedButton />
-            <CustomButton to="" name="Open Source Projects" />
+            <CustomButton
+              to="https://github.com/Bookmie-Devs"
+              name="Open Source Projects"
+            />
           </div>
         </div>
         <div className="px-2 flex flex-col">
