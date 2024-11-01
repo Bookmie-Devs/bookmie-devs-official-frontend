@@ -1,5 +1,5 @@
 import { useState } from "react";
-import learingSvg from "../../assets/learning.svg";
+import confenrence from "../../assets/conference.svg";
 import { Link } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
 
@@ -29,11 +29,13 @@ function Signup() {
 
   return (
     <div className="h-auto pt-16 items-center bg-slate-800 justify-center flex space-y-5">
-      <div className="flex justify-center space-x-32">
+      <div className="flex justify-center space-x-10 px-28">
         <div className="hidden sm:inline">
-          <img className="animate-bounce" src={learingSvg} />
+          <div className="">
+            <img className="" src={confenrence} />
+          </div>
         </div>
-        <form action="" onSubmit={handleSignup}>
+        <form className="" action="" onSubmit={handleSignup}>
           <div className="flex flex-col">
             <div className="flex flex-col">
               <label className="text-xl text-white m-1">Username</label>

@@ -4,6 +4,7 @@ import Stats from "../../components/Stats";
 import { AiOutlineSolution } from "react-icons/ai";
 import CustomButton from "../../components/CustomButton";
 import footerWave from "../../assets/footerWave.svg";
+import devTeam from "../../assets/devTeam.svg";
 
 function Home() {
   return (
@@ -13,26 +14,27 @@ function Home() {
         className="
         flex flex-col sm:flex-row justify-between 
         dark:bg-slate-800 bg-slate-100
-        items-center px-16 py-5"
+        items-center px-16 py-1"
       >
-        <div className="px-3 py-40 flex flex-col rounded-lg">
+        <div className="px-3 py-32 flex flex-col rounded-lg">
           <div className="mb-9">
-            <p className="text-5xl font-semibold dark:text-slate-100 text-slate-800">
-              Get Started on Bookmie 
+            <p className="text-5xl font-semibold dark:text-slate-100 mb-5 text-slate-800">
+              Get Started with Bookmie
             </p>
             <p className="text-xl text-slate-800 font-mono dark:text-slate-100 text-start">
-              Get started building your dream projects with developers with a track record of devering the best softwares
+              Get started building your dream projects with developers with a
+              track record of devering the best softwares
             </p>
           </div>
 
           <div className="flex space-x-4 flex-col sm:flex-row">
             <GetStartedButton />
-            <CustomButton />
+            <CustomButton name="Open Projects" />
           </div>
         </div>
 
         <div className="px-2 flex flex-col">
-          <img className="animate-pulse" src="onlineTest.svg" />
+          <img className="animate-pulse" src={devTeam} />
         </div>
       </div>
 
