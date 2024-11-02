@@ -1,0 +1,19 @@
+/* styles.css */
+@keyframes changeBackground {
+  0% {
+    background-image: url("https://via.placeholder.com/800x600/FF5733/FFFFFF?text=First+Image");
+  }
+  50% {
+    background-image: url("https://via.placeholder.com/800x600/33FF57/FFFFFF?text=Second+Image");
+  }
+  100% {
+    background-image: url("https://via.placeholder.com/800x600/3357FF/FFFFFF?text=Third+Image");
+  }
+}
+
+.background-animation {
+  animation: changeBackground 10s infinite; /* Change duration as needed */
+  background-size: cover; /* Adjust background size */
+  background-position: center; /* Center the background */
+  height: 100vh; /* Full height */
+}

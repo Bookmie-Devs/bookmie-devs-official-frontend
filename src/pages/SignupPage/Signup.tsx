@@ -34,14 +34,14 @@ function Signup() {
         <title>Signup - Bookmie Devs</title>
         <meta name="description" content="Create a new account." />
       </Helmet>
-      <div className="h-screen pt-6 bg-slate-800 justify-center flex space-y-5">
+      <div className="h-auto pt-10 items-center bg-slate-800 justify-center flex space-y-5">
         <div className="flex justify-center mb-9 sm:mb-0 sm:space-x-10 sm:px-28">
           <div className="hidden sm:inline">
             <div className="">
               <img className="animate-pulse" src={confenrence} />
             </div>
           </div>
-          <form action="" onSubmit={handleSignup}>
+          <form className="" action="" onSubmit={handleSignup}>
             <div className="flex flex-col">
               <div className="flex flex-col">
                 <label className="text-xl text-white m-1">Username</label>
