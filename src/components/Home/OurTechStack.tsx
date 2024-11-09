@@ -1,9 +1,13 @@
 import { FaCloud, FaMobile, FaReact, FaSearch, FaServer } from "react-icons/fa";
 import TechStack from "./TechStack";
+import techBgImg from "../../assets/bg.jpg";
 
 function OurTechStack() {
   return (
-    <div className="px-10 bg-slate-800 dark:bg-slate-100 outline outline-yellow-400 shadow-md shadow-yellow-500">
+    <div
+      style={{ backgroundImage: `url(${techBgImg})` }}
+      className="px-10 py-2 bg-slate-800 dark:bg-slate-100 outline outline-yellow-400 shadow-md shadow-yellow-500"
+    >
       <div className="px-1 py-7 flex justify-evenly space-y-7 sm:space-y-0 sm:space-x-3 flex-col sm:flex-row  m-2 rounded-lg">
         <TechStack icon={<FaReact size={30} />} name="Frontend Devs" />
         <TechStack icon={<FaServer size={30} />} name="Backend Devs" />

@@ -14,6 +14,7 @@ import wave2 from "../../assets/wave2.svg";
 import devTeam from "../../assets/devTeam.svg";
 import OurTechStack from "../../components/Home/OurTechStack";
 import { Helmet } from "react-helmet";
+import techBgImg from "../../assets/bg.jpg";
 import "./Home.css";
 
 const backgroundImages = [wave, bg, wave2];
@@ -36,12 +37,12 @@ function Home() {
   const inViewStates = sectionRefs.map((ref) => useInView(ref, { once: true }));
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setBgIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
-      setCurrentBg(backgroundImages[bgIndex]);
+    setInterval(() => {
+      // let index = increaseBgIndex();
+      setBgIndex((index) => index + 1);
+      // setCurrentBg(backgroundImages[0]);
       console.log(bgIndex);
-    }, 2000);
-    clearInterval(interval);
+    }, 10000);
   }, [bgIndex]);
   return (
     <>
@@ -62,7 +63,7 @@ function Home() {
           variants={fadeInFromLeft} // Fade in from the left
           transition={{ duration: 1.0 }}
           style={{ backgroundImage: `url(${currentBg})` }}
-          className="flex flex-col sm:flex-row justify-between mb-5 items-center bg-opacity-5 px-1 sm:px-16 py-1"
+          className="flex flex-col sm:flex-row justify-between bg-cover mb-5 items-center bg-opacity-5 px-1 sm:px-16 py-1"
           ref={sectionRefs[0]}
         >
           <div className="px-3 py-20 sm:py-32 flex flex-col rounded-lg">
@@ -70,7 +71,7 @@ function Home() {
               <p className="text-5xl text-center font-semibold dark:text-slate-100 mb-5 text-slate-800">
                 Get Started with Bookmie
               </p>
-              <p className="text-xl text-center text-slate-800 font-mono dark:text-slate-100 sm:text-start">
+              <p className="text-xl animate-bounce text-center text-slate-800 font-mono dark:text-slate-100 sm:text-start">
                 Get started building your dream projects with developers with a
                 track record of delivering the best software.
               </p>
@@ -85,7 +86,7 @@ function Home() {
           </div>
           <motion.div variants={fadeInFromLeft}>
             <img
-              className="animate-pulse"
+              className="sm:animate-pulse"
               src={devTeam}
               alt="Development Team"
             />
@@ -107,33 +108,64 @@ function Home() {
         </motion.div>
 
         {/* Section 3 */}
-        <motion.div
-          initial="hidden"
-          animate={inViewStates[2] ? "visible" : "hidden"}
-          variants={fadeInFromLeft} // Fade in from the left
-          transition={{ duration: 0.7 }}
-          className="px-6 sm:px-21 py-8 flex flex-col space-y-12 sm:flex-row items-center sm:space-y-3"
-          ref={sectionRefs[2]}
+        <div
+          className="bg-cover"
+          style={{ backgroundImage: `url(${currentBg})` }}
         >
-          <div className="p-2 flex w-full space-y-10 flex-col">
-            <div>
-              <p className="text-5xl text-slate-100 font-bold">Why Bookmie?</p>
+          <motion.div
+            initial="hidden"
+            animate={inViewStates[2] ? "visible" : "hidden"}
+            variants={fadeInFromLeft} // Fade in from the left
+            transition={{ duration: 0.7 }}
+            className="px-6 sm:px-21 py-8 bg-opacity-30 flex flex-col space-y-12 sm:flex-row items-center sm:space-y-3"
+            ref={sectionRefs[2]}
+          >
+            <div className="p-2 flex w-full space-y-10 flex-col">
+              <div>
+                <p className="text-5xl text-slate-100 font-bold">
+                  Why Bookmie?
+                </p>
+              </div>
+              <div>
+                <p className="text-slate-800 dark:text-white">
+                  We deliver cutting egde software from low level software to
+                  web app that runs smoothly with consistent updates. We allow
+                  you to keep track of your software performance with a highly
+                  user friendly dahsboard which allows you to request for
+                  updates report issues
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-slate-800 dark:text-white">
-                An online all-in-one platform that allows Teachers, developers,
-                and tutors to set coding exams, and students to take those
-                exams, with automatic grading.
-              </p>
-            </div>
-            <div>
-              <GetStartedButton />
-            </div>
-          </div>
-          <motion.div variants={fadeInFromLeft}>
-            <img src={learning} alt="Learning" />
+            <motion.div variants={fadeInFromLeft}>
+              <img src={learning} alt="Learning" />
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* ////////////////////////////////////// */}
+          <motion.div
+            initial="hidden"
+            animate={inViewStates[2] ? "visible" : "hidden"}
+            variants={fadeInFromLeft} // Fade in from the left
+            transition={{ duration: 0.7 }}
+            className="px-6 sm:px-21 py-8 flex flex-col space-y-12 sm:flex-row sm:space-x-36 items-center sm:space-y-3"
+            ref={sectionRefs[2]}
+          >
+            <motion.div variants={fadeInFromLeft}>
+              <img src={learning} alt="Learning" />
+            </motion.div>
+            <div className="p-2 flex w-full space-y-10 flex-col">
+              <div>
+                <p className="text-5xl animate-bounce text-slate-100 font-bold">
+                  Track your software devlivery with Bookmie
+                </p>
+              </div>
+
+              <div>
+                <GetStartedButton />
+              </div>
+            </div>
+          </motion.div>
+        </div>
 
         {/* Section 4 */}
         <motion.div
@@ -141,6 +173,7 @@ function Home() {
           animate={inViewStates[3] ? "visible" : "hidden"}
           variants={fadeInFromRight} // Fade in from the right
           transition={{ duration: 0.8 }}
+          style={{ backgroundImage: `url(${techBgImg})` }}
           className="px-10 bg-slate-800 outline outline-yellow-400 shadow-md shadow-yellow-400 dark:bg-slate-100 mb-4"
           ref={sectionRefs[3]}
         >
@@ -165,7 +198,7 @@ function Home() {
           className="px-10 bg-slate-100 bg-center"
           ref={sectionRefs[4]}
         >
-          <div className="px-2 py-5 flex sm:space-x-20 flex-col space-y-11 sm:space-y-0 sm:flex-row rounded-lg">
+          <div className="px-2 py-5 animate-pulse flex sm:space-x-20 flex-col space-y-11 sm:space-y-0 sm:flex-row rounded-lg">
             <div>
               <img className="rounded-2xl" src="cimg1.webp" alt="Image 1" />
             </div>
