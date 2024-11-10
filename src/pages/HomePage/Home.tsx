@@ -8,16 +8,18 @@ import { AiOutlineSolution } from "react-icons/ai";
 import learning from "../../assets/learning.svg";
 import CustomButton from "../../components/CustomButton";
 import footerWave from "../../assets/footerWave.svg";
-import bg from "../../assets/bg.jpg";
+import techBgImg from "../../assets/bg.svg";
 import wave from "../../assets/wave.svg";
 import wave2 from "../../assets/wave2.svg";
-import devTeam from "../../assets/devTeam.svg";
+import cloudsvg from "../../assets/cloud.svg";
+import severStatusSvg from "../../assets/serverStatus.svg";
+// import yellowave from "../../assets/yellowave.svg";
 import OurTechStack from "../../components/Home/OurTechStack";
 import { Helmet } from "react-helmet";
-import techBgImg from "../../assets/bg.jpg";
 import "./Home.css";
+import NavBar from "../../layout/NavBar";
 
-const backgroundImages = [wave, bg, wave2];
+const backgroundImages = [wave, wave2];
 
 function Home() {
   const [bgIndex, setBgIndex] = useState(0);
@@ -54,8 +56,8 @@ function Home() {
           content="Get started building your dream projects with developers with a track record of delivering the best software."
         />
       </Helmet>
-      <div className="dark:bg-slate-800 bg-slate-100">
-        <hr />
+      <div className="bg-white">
+        {/* <hr /> */}
 
         {/* Section 1 */}
         <motion.div
@@ -69,10 +71,10 @@ function Home() {
         >
           <div className="px-3 py-20 sm:py-32 flex flex-col rounded-lg">
             <motion.div variants={fadeInFromLeft}>
-              <p className="text-5xl text-center font-semibold dark:text-slate-100 mb-5 text-slate-800">
-                Get Started with Bookmie
+              <p className="text-5xl text-center sm:text-start font-semibold mb-5 text-blue-950">
+                Welcome Bookmie
               </p>
-              <p className="text-xl animate-bounce text-center text-slate-800 font-mono dark:text-slate-100 sm:text-start">
+              <p className="text-xl animate-bounce text-center text-blue-950 font-sans sm:text-start">
                 Get started building your dream projects with developers with a
                 track record of delivering the best software.
               </p>
@@ -88,7 +90,7 @@ function Home() {
           <motion.div variants={fadeInFromLeft}>
             <img
               className="sm:animate-pulse"
-              src={devTeam}
+              src={cloudsvg}
               alt="Development Team"
             />
           </motion.div>
@@ -98,21 +100,18 @@ function Home() {
         <motion.div
           initial="hidden"
           animate={inViewStates[1] ? "visible" : "hidden"}
-          variants={fadeInFromRight} // Fade in from the right
+          variants={fadeInFromRight}
           transition={{ duration: 0.6 }}
           ref={sectionRefs[1]}
         >
-          <p className="text-center text-3xl text-white font-bold mb-5">
+          <p className="text-center text-3xl text-blue-950 font-bold mb-5">
             We Specialize in . . .
           </p>
           <OurTechStack />
         </motion.div>
 
         {/* Section 3 */}
-        <div
-          className="bg-cover"
-          style={{ backgroundImage: `url(${currentBg})` }}
-        >
+        <div className="bg-cover" style={{ backgroundImage: `url(${wave2})` }}>
           <motion.div
             initial="hidden"
             animate={inViewStates[2] ? "visible" : "hidden"}
@@ -123,12 +122,10 @@ function Home() {
           >
             <div className="p-2 flex w-full space-y-10 flex-col">
               <div>
-                <p className="text-5xl text-slate-100 font-bold">
-                  Why Bookmie?
-                </p>
+                <p className="text-5xl text-blue-950 font-bold">Why Bookmie?</p>
               </div>
               <div>
-                <p className="text-slate-800 dark:text-white">
+                <p className="text-blue-950">
                   We deliver cutting egde software from low level software to
                   web app that runs smoothly with consistent updates. We allow
                   you to keep track of your software performance with a highly
@@ -138,7 +135,7 @@ function Home() {
               </div>
             </div>
             <motion.div variants={fadeInFromLeft}>
-              <img src={learning} alt="Learning" />
+              <img src={severStatusSvg} alt="Learning" />
             </motion.div>
           </motion.div>
 
@@ -156,7 +153,7 @@ function Home() {
             </motion.div>
             <div className="p-2 flex w-full space-y-10 flex-col">
               <div>
-                <p className="text-5xl animate-bounce text-slate-100 font-bold">
+                <p className="text-5xl animate-bounce text-blue-950 font-bold">
                   Track your software devlivery with Bookmie
                 </p>
               </div>
@@ -190,7 +187,7 @@ function Home() {
         </motion.div>
 
         {/* Section 5 */}
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           animate={inViewStates[4] ? "visible" : "hidden"}
           variants={fadeInFromLeft}
@@ -211,7 +208,7 @@ function Home() {
               />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </>
   );

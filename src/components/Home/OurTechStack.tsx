@@ -1,6 +1,6 @@
 import { FaCloud, FaMobile, FaReact, FaSearch, FaServer } from "react-icons/fa";
 import TechStack from "./TechStack";
-import techBgImg from "../../assets/bg.jpg";
+import techBgImg from "../../assets/bg.svg";
 
 function OurTechStack() {
   return (

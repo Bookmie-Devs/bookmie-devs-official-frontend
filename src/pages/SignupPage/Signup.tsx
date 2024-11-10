@@ -3,6 +3,7 @@ import confenrence from "../../assets/conference.svg";
 import { Link } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
 import { Helmet } from "react-helmet";
+import wave from "../../assets/yellowave.svg";
 
 // interface signupFormData {
 //   username: string;
@@ -34,7 +35,10 @@ function Signup() {
         <title>Signup - Bookmie Devs</title>
         <meta name="description" content="Create a new account." />
       </Helmet>
-      <div className="h-auto pt-10 items-center bg-slate-800 justify-center flex space-y-5">
+      <div
+        style={{ backgroundImage: `url(${wave})` }}
+        className="h-auto pt-10 items-center bg-white bg-cover justify-center flex space-y-5"
+      >
         <div className="flex justify-center mb-9 sm:mb-0 sm:space-x-10 sm:px-28">
           <div className="hidden sm:inline">
             <div className="">
@@ -70,7 +74,7 @@ function Signup() {
               </div>
             </div>
             <div className="w-full mt-4">
-              <button className="flex items-center justify-center bg-green-400 text-lg text-center py-3 rounded-md w-full">
+              <button className="flex items-center justify-center bg-blue-950 text-white text-lg text-center py-3 rounded-md w-full">
                 Submit
                 <div className="ml-3">
                   <RotatingLines
@@ -84,9 +88,9 @@ function Signup() {
                 </div>
               </button>
             </div>
-            <p className="text-white text-lg pt-3">
+            <p className="text-blue-9 50 text-lg pt-3">
               Already have an account &nbsp;
-              <Link className="text-green-400 hover:underline" to={"/login"}>
+              <Link className="text-blue-950 hover:underline" to={"/login"}>
                 Login
               </Link>
             </p>

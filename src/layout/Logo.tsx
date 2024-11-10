@@ -5,7 +5,7 @@ function Logo() {
   return (
     <Link
       to={"/"}
-      className="dark:text-white text-black font-extrabold flex items-center space-x-2"
+      className="text-blue-950 font-extrabold flex items-center space-x-2"
     >
       <img width={40} src={logo} />
       <p className="text-3xl">Bookmie Devs</p>

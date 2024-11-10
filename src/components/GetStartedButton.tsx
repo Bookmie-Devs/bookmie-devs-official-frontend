@@ -5,7 +5,7 @@ function GetStartedButton() {
     <Link
       to={"signup"}
       className="
-      bg-green-400 text-xl text-center text-black
+      bg-blue-950 text-xl text-center text-white
       shadow-md rounded-md px-16 py-5"
     >
       Get Started
