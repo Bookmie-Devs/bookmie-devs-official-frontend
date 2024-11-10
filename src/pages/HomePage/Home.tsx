@@ -33,6 +33,7 @@ function Home() {
     visible: { opacity: 1, x: 0 }, // End at its original position
   };
 
+  console.log(setCurrentBg);
   const sectionRefs = Array.from({ length: 5 }, () => useRef(null));
   const inViewStates = sectionRefs.map((ref) => useInView(ref, { once: true }));
 
