@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { VscThreeBars } from "react-icons/vsc";
-import wave from "../assets/wave.svg";
 
 function NavBar() {
   return (
-    <nav className=" bg-white flex justify-between bg-cover items-center px-3 sm:px-9 py-5">
+    <nav className=" bg-white dark:bg-slate-800 flex justify-between bg-cover items-center px-3 sm:px-9 py-5">
       <Logo />
-      <button className="sm:hidden  text-white">
+      <button className="sm:hidden dark:text-white text-white">
         <VscThreeBars size={30} />
       </button>
       <div className="space-x-4 hidden sm:inline">
-        <Link to={"login"} className="text-xl text-bue-950">
+        <Link to={"login"} className="text-xl dark:text-white text-blue-950">
           Contact
         </Link>
         <Link
@@ -21,7 +20,7 @@ function NavBar() {
           Get Started
         </Link>
         <Link
-          className="text-lg px-6 py-3 rounded-md outline outline-2 outline-slate-900 text-slate-900"
+          className="text-lg px-6 py-3 rounded-md outline outline-2 dark:text-white dark:outline-white outline-slate-900 text-slate-900"
           to={""}
         >
           Github

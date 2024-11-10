@@ -7,7 +7,6 @@ import Stats from "../../components/Home/Stats";
 import { AiOutlineSolution } from "react-icons/ai";
 import learning from "../../assets/learning.svg";
 import CustomButton from "../../components/CustomButton";
-import footerWave from "../../assets/footerWave.svg";
 import techBgImg from "../../assets/bg.svg";
 import wave from "../../assets/wave.svg";
 import wave2 from "../../assets/wave2.svg";
@@ -17,7 +16,6 @@ import severStatusSvg from "../../assets/serverStatus.svg";
 import OurTechStack from "../../components/Home/OurTechStack";
 import { Helmet } from "react-helmet";
 import "./Home.css";
-import NavBar from "../../layout/NavBar";
 
 const backgroundImages = [wave, wave2];
 
@@ -56,7 +54,7 @@ function Home() {
           content="Get started building your dream projects with developers with a track record of delivering the best software."
         />
       </Helmet>
-      <div className="bg-white">
+      <div className="bg-white dark:bg-slate-800 ">
         {/* <hr /> */}
 
         {/* Section 1 */}
@@ -71,10 +69,10 @@ function Home() {
         >
           <div className="px-3 py-20 sm:py-32 flex flex-col rounded-lg">
             <motion.div variants={fadeInFromLeft}>
-              <p className="text-5xl text-center sm:text-start font-semibold mb-5 text-blue-950">
+              <p className="text-5xl text-center sm:text-start font-semibold mb-5 dark:text-white text-blue-950">
                 Welcome Bookmie
               </p>
-              <p className="text-xl animate-bounce text-center text-blue-950 font-sans sm:text-start">
+              <p className="text-xl animate-bounce text-center dark:text-white text-blue-950 font-sans sm:text-start">
                 Get started building your dream projects with developers with a
                 track record of delivering the best software.
               </p>

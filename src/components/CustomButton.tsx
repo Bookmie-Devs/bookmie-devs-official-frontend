@@ -14,6 +14,8 @@ function CustomButton({ name, to }: CustomButtonProps): React.JSX.Element {
       className="
         outline
         outline-2 
+        dark:outline-white
+        dark:text-white
         outline-blue-950
         text-slate-800
         text-xl
