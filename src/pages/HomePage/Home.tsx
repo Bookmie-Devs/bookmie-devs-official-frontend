@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
-import { FaCode, FaGift, FaLaptopCode } from "react-icons/fa";
+import { FaCode, FaGift, FaGithub, FaLaptopCode } from "react-icons/fa";
 import GetStartedButton from "../../components/GetStartedButton";
 import Stats from "../../components/Home/Stats";
 import { AiOutlineSolution } from "react-icons/ai";
@@ -16,10 +16,13 @@ import severStatusSvg from "../../assets/serverStatus.svg";
 import OurTechStack from "../../components/Home/OurTechStack";
 import { Helmet } from "react-helmet";
 import "./Home.css";
+// import { useTheme } from "../../context/ThemeContext";
 
 const backgroundImages = [wave, wave2];
 
 function Home() {
+  // const [theme, setTheme] = useTheme();
+
   const [bgIndex, setBgIndex] = useState(0);
   const [currentBg, setCurrentBg] = useState(backgroundImages[0]);
 
@@ -81,7 +84,8 @@ function Home() {
               <GetStartedButton />
               <CustomButton
                 to="https://github.com/Bookmie-Devs"
-                name="Open Source Projects"
+                name="Github"
+                icon={<FaGithub />}
               />
             </div>
           </div>
@@ -102,7 +106,7 @@ function Home() {
           transition={{ duration: 0.6 }}
           ref={sectionRefs[1]}
         >
-          <p className="text-center text-3xl text-blue-950 font-bold mb-5">
+          <p className="text-center text-3xl dark:text-white text-blue-950 font-bold mb-5">
             We Specialize in . . .
           </p>
           <OurTechStack />
@@ -170,7 +174,7 @@ function Home() {
           variants={fadeInFromRight} // Fade in from the right
           transition={{ duration: 0.8 }}
           style={{ backgroundImage: `url(${techBgImg})` }}
-          className="px-10 bg-slate-800 outline outline-yellow-400 shadow-md shadow-yellow-400 dark:bg-slate-100 mb-4"
+          className="px-10 dark:bg-slate-800 outline outline-yellow-400 shadow-md shadow-yellow-400 bg-slate-100 mb-4"
           ref={sectionRefs[3]}
         >
           <div className="px-3 py-7 flex justify-evenly space-y-10 sm:space-y-0 flex-col sm:flex-row m-2 rounded-lg">
