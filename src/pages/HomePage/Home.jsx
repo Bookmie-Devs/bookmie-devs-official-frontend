@@ -23,7 +23,7 @@ import ContactUsButton from "../../components/ContactUsButton";
 const backgroundImages = [wave, wave2];
 
 function Home() {
-  const { theme, setTheme } = useTheme();
+  const { isDarkMode, setIsDarkMode } = useTheme();
 
   const [bgIndex, setBgIndex] = useState(0);
   const [currentBg, setCurrentBg] = useState(backgroundImages[0]);
@@ -66,7 +66,7 @@ function Home() {
         <motion.div
           initial="hidden"
           animate={inViewStates[0] ? "visible" : "hidden"}
-          variants={fadeInFromLeft} // Fade in from the left
+          variants={fadeInFromLeft}
           transition={{ duration: 1.0 }}
           style={{ backgroundImage: `url(${currentBg})` }}
           className="flex flex-col sm:flex-row justify-between bg-cover mb-5 items-center bg-opacity-5 px-1 sm:px-16 py-1"
@@ -116,21 +116,26 @@ function Home() {
         </motion.div>
 
         {/* Section 3 */}
-        <div className="bg-cover" style={{ backgroundImage: `url(${wave2})` }}>
+        <div
+          className="bg-cover dark:bg-slate-800"
+          style={{ backgroundImage: `url(${!isDarkMode && wave2})` }}
+        >
           <motion.div
             initial="hidden"
             animate={inViewStates[2] ? "visible" : "hidden"}
-            variants={fadeInFromLeft} // Fade in from the left
+            variants={fadeInFromLeft}
             transition={{ duration: 0.7 }}
             className="px-6 sm:px-21 py-8 bg-opacity-30 flex flex-col space-y-12 sm:flex-row items-center sm:space-y-3"
             ref={sectionRefs[2]}
           >
             <div className="p-2 flex w-full space-y-10 flex-col">
               <div>
-                <p className="text-5xl text-blue-950 font-bold">Why Bookmie?</p>
+                <p className="text-5xl text-blue-950 dark:text-white font-bold">
+                  Why Bookmie?
+                </p>
               </div>
               <div>
-                <p className="text-blue-950">
+                <p className="text-blue-950 dark:text-white">
                   We deliver cutting egde software from low level software to
                   web app that runs smoothly with consistent updates. We allow
                   you to keep track of your software performance with a highly
@@ -148,7 +153,7 @@ function Home() {
           <motion.div
             initial="hidden"
             animate={inViewStates[2] ? "visible" : "hidden"}
-            variants={fadeInFromLeft} // Fade in from the left
+            variants={fadeInFromLeft}
             transition={{ duration: 0.7 }}
             className="px-6 sm:px-21 py-8 flex flex-col space-y-12 sm:flex-row sm:space-x-36 items-center sm:space-y-3"
             ref={sectionRefs[2]}
@@ -158,7 +163,7 @@ function Home() {
             </motion.div>
             <div className="p-2 flex w-full space-y-10 flex-col">
               <div>
-                <p className="text-5xl animate-bounce text-blue-950 font-bold">
+                <p className="text-5xl dark:text-white animate-bounce text-blue-950 font-bold">
                   Track your software devlivery with Bookmie
                 </p>
               </div>
@@ -174,7 +179,7 @@ function Home() {
         <motion.div
           initial="hidden"
           animate={inViewStates[3] ? "visible" : "hidden"}
-          variants={fadeInFromRight} // Fade in from the right
+          variants={fadeInFromRight}
           transition={{ duration: 0.8 }}
           style={{ backgroundImage: `url(${techBgImg})` }}
           className="px-10 dark:bg-slate-800 outline outline-yellow-400 shadow-md shadow-yellow-400 bg-slate-100 mb-4"
