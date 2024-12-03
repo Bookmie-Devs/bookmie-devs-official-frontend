@@ -17,6 +17,7 @@ import { Helmet } from "react-helmet";
 import "./Home.css";
 import AboutButton from "../../components/GetStartedButton";
 import { useTheme } from "../../context/ThemeContext";
+import ContactUsButton from "../../components/ContactUsButton";
 // import { useTheme } from "../../context/ThemeContext";
 
 const backgroundImages = [wave, wave2];
@@ -88,6 +89,7 @@ function Home() {
                 icon={<FaGithub />}
               />
               <AboutButton />
+              <ContactUsButton />
             </div>
           </div>
           <motion.div variants={fadeInFromLeft}>

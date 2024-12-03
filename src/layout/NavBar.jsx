@@ -10,10 +10,15 @@ function NavBar() {
   return (
     <nav className=" bg-white dark:bg-slate-800 flex justify-between bg-cover items-center px-3 sm:px-9 py-5">
       <Logo />
-      <button className="sm:hidden dark:text-white text-white">
-        <VscThreeBars size={30} />
+      <button
+        onClick={() => setIsDarkMode(!isDarkMode)}
+        className="sm:hidden dark:text-white mr-4 text-slate-900"
+      >
+        {/* <VscThreeBars size={30} /> */}
+        {isDarkMode && <IoSunnySharp size={20} />}
+        {!isDarkMode && <FaMoon size={20} />}
       </button>
-      <div className="  hidden sm:flex sm:items-center">
+      <div className="hidden sm:flex sm:items-center">
         <Link
           to={"contact"}
           className="text-lg hover:animate-bounce dark:text-white text-blue-950"
