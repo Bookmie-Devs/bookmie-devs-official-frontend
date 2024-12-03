@@ -16,12 +16,13 @@ import OurTechStack from "../../components/Home/OurTechStack";
 import { Helmet } from "react-helmet";
 import "./Home.css";
 import AboutButton from "../../components/GetStartedButton";
+import { useTheme } from "../../context/ThemeContext";
 // import { useTheme } from "../../context/ThemeContext";
 
 const backgroundImages = [wave, wave2];
 
 function Home() {
-  // const [theme, setTheme] = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const [bgIndex, setBgIndex] = useState(0);
   const [currentBg, setCurrentBg] = useState(backgroundImages[0]);

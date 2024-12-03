@@ -1,18 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface CustomButtonProps {
-  name: string;
-  to: string;
-  icon?: any;
-}
-
 // Step 2: Use the interface in the component
-function CustomButton({
-  name,
-  to,
-  icon,
-}: CustomButtonProps): React.JSX.Element {
+function CustomButton({ name, to, icon }) {
   return (
     <Link
       to={to}

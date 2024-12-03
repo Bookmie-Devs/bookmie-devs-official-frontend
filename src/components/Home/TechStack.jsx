@@ -1,11 +1,6 @@
 import React from "react";
 
-interface statInfoProp {
-  statName: string;
-  icon: React.JSX.Element;
-}
-
-function Stats(props: statInfoProp): React.JSX.Element {
+function TechStack(props) {
   return (
     <div
       className="
@@ -17,10 +12,9 @@ function Stats(props: statInfoProp): React.JSX.Element {
       items-center flex-col"
     >
       {props.icon}
-      <h2 className="text-2xl font-bold">2000+</h2>
-      <p className="text-lg">{props.statName}</p>
+      <p className="text-lg">{props.name}</p>
     </div>
   );
 }
 
-export default Stats;
+export default TechStack;

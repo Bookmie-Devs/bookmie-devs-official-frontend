@@ -5,7 +5,7 @@ import { ThreeDots } from "react-loader-spinner";
 function HomeLogin() {
   const [loading, setLoading] = useState(false);
 
-  async function handleLogin(e: any): Promise<void> {
+  async function handleLogin(e) {
     setLoading(true);
     console.log(e);
     const form = new FormData(e.target);
