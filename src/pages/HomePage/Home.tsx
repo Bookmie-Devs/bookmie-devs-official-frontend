@@ -81,7 +81,7 @@ function Home() {
               </p>
             </motion.div>
             <div className="flex space-y-4 sm:space-y-0 sm:space-x-4 flex-col sm:flex-row">
-              <GetStartedButton />
+              {/* <GetStartedButton /> */}
               <CustomButton
                 to="https://github.com/Bookmie-Devs"
                 name="Github"

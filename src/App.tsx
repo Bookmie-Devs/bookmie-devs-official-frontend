@@ -2,9 +2,9 @@
 import Home from "./pages/HomePage/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
-import Login from "./pages/LoginPage/Login";
-import Signup from "./pages/SignupPage/Signup";
 import { ThemeProvider } from "./context/ThemeContext";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 // import "./App.css";
 
@@ -17,9 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="signup" element={<Signup />} />
+            <Route path="about" element={<About />} />
           </Route>
-          <Route path="login" element={<Login />} />
+          <Route path="contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

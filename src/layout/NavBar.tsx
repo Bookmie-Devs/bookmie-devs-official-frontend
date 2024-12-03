@@ -12,13 +12,13 @@ function NavBar() {
       </button>
       <div className="  hidden sm:flex sm:items-center">
         <Link
-          to={"login"}
+          to={"contact"}
           className="text-lg hover:animate-bounce dark:text-white text-blue-950"
         >
           Contact
         </Link>
         <Link
-          to={"signup"}
+          to={"about"}
           className="text-lg px-6 py-3 hover:animate-bounce text-center rounded-md text-blue-950"
         >
           About
