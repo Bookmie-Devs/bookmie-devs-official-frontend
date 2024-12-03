@@ -16,7 +16,7 @@ function CustomButton({
   return (
     <Link
       to={to}
-      className="flex outline items-center space-x-8
+      className="flex outline items-center space-x-8 justify-center
         outline-2 
         dark:outline-white
         dark:text-white

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import { FaCode, FaGift, FaGithub, FaLaptopCode } from "react-icons/fa";
-import GetStartedButton from "../../components/GetStartedButton";
 import Stats from "../../components/Home/Stats";
 import { AiOutlineSolution } from "react-icons/ai";
 import learning from "../../assets/learning.svg";
@@ -16,6 +15,7 @@ import severStatusSvg from "../../assets/serverStatus.svg";
 import OurTechStack from "../../components/Home/OurTechStack";
 import { Helmet } from "react-helmet";
 import "./Home.css";
+import AboutButton from "../../components/GetStartedButton";
 // import { useTheme } from "../../context/ThemeContext";
 
 const backgroundImages = [wave, wave2];
@@ -81,12 +81,12 @@ function Home() {
               </p>
             </motion.div>
             <div className="flex space-y-4 sm:space-y-0 sm:space-x-4 flex-col sm:flex-row">
-              {/* <GetStartedButton /> */}
               <CustomButton
                 to="https://github.com/Bookmie-Devs"
                 name="Github"
                 icon={<FaGithub />}
               />
+              <AboutButton />
             </div>
           </div>
           <motion.div variants={fadeInFromLeft}>
@@ -161,7 +161,7 @@ function Home() {
               </div>
 
               <div>
-                <GetStartedButton />
+                <AboutButton />
               </div>
             </div>
           </motion.div>

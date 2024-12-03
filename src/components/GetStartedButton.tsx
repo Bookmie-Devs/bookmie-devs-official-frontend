@@ -1,16 +1,18 @@
+import { FcAbout } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
-function GetStartedButton() {
+function AboutButton() {
   return (
     <Link
-      to={"/contact"}
-      className="
+      to={"/about"}
+      className="flex items-center justify-center
       bg-blue-950 text-xl text-center text-white
       shadow-md rounded-md px-16 py-5"
     >
-      Get Started
+      About
+      <FcAbout className="ml-1" />
     </Link>
   );
 }
 
-export default GetStartedButton;
+export default AboutButton;
